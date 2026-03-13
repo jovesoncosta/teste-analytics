@@ -1,4 +1,4 @@
-# Teste Técnico — Engenheiro de Dados @ Monest
+# Teste Técnico — Analytics Engineer @ Monest
 
 ## Sobre a Monest
 Fazemos cobrança com IA via WhatsApp. São mais de 1 milhão de conversas por mês, vindas de múltiplas fontes de dados.
@@ -22,17 +22,17 @@ Você define o que faz sentido entregar.
 ## Requisitos
 - Pipeline em Python que consolide as fontes e exporte um CSV
 - Dashboard a partir do CSV processado (Streamlit, Metabase, ou ferramenta de sua escolha)
-- DAG no Airflow para a orquestração
+- Orquestração do pipeline (Airflow, Prefect, ou script com agendamento — você escolhe)
 - Schema documentado do CSV de saída
 
 ## Pontos de avaliação
 1. Funcionamento do pipeline
 2. Qualidade das métricas escolhidas e da transformação
 3. Tratamento de dados inconsistentes
-4. Clareza da DAG
+4. Clareza da orquestração
 5. Visualização e storytelling do dashboard
 
 ## Entrega
-Fork este repositório, implemente, e envie o link para matheus.morett@monest.com.br com o assunto **Teste AE - Monest**.
+Fork este repositório, implemente, e envie o link para matheus.morett@monest.com.br com o assunto **Teste Dados - Monest**.
 
 Se o repositório for privado, adicione **matheusmorett2** como colaborador.
