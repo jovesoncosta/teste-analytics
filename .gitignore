@@ -1,0 +1,12 @@
+venv/
+.env
+
+data/
+
+logs/
+plugins/
+airflow.db
+airflow.cfg
+webserver_config.py
+.DS_Store
+__pycache__/
