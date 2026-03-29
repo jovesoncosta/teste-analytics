@@ -29,13 +29,23 @@ Para garantir que o processamento dos dados ocorra de forma automática e isolad
 
 ---
 
-## 3. Tratamento de Dados Inconsistentes (Data Quality)
-Para que se confie nos números do painel, foram implementadas regras rigorosas de qualidade de dados durante a transição da camada Bronze para a Silver e Gold:
+## 3. Tratamento de Dados e Regras de Negócio (Data Quality)
 
-* **Validação Financeira:** Pagamentos com valores zerados ou negativos (que geralmente representam estornos ou erros de sistema) foram bloqueados para não inflar artificialmente o caixa.
-* **Integridade Referencial (Órfãos):** Acordos vinculados a dívidas que não existem na base principal, ou pagamentos vinculados a acordos deletados, são removidos automaticamente do cálculo.
-* **Tratamento de Valores Nulos:** Dados vazios (NaN) foram preenchidos com inteligência lógica. Valores financeiros vazios viram 0.0, contagens viram 0, e categorias sem nome viram 'Sem Campanha', evitando que o painel quebre ao tentar calcular médias.
-* **Blindagem de Acordos Ativos:** Clientes que quebram acordos e renegociam a dívida geram múltiplas linhas. O pipeline foi programado para isolar apenas o "Último Acordo" como ativo, tratando os anteriores como "Cancelados". Isso evita que a dívida do cliente seja somada duas vezes no montante total.
+Para garantir a confiabilidade dos indicadores no dashboard, implementamos um rigoroso processo de qualidade de dados utilizando a Arquitetura Medalhão (Bronze ➔ Silver ➔ Gold).
+
+### Camada Silver: Limpeza e Integridade
+Nesta etapa, os dados brutos foram higienizados para corrigir falhas operacionais e de exportação do sistema legado:
+* **Remoção de "Lixo" do Sistema:** Bloqueio de linhas de subtotal exportadas indevidamente que duplicavam o montante da carteira.
+* **Integridade Referencial:** Exclusão de dados órfãos (ex: acordos atrelados a dívidas inexistentes ou pagamentos sem acordo válido).
+* **Filtro Financeiro:** Remoção de pagamentos zerados ou negativos (identificados como estornos ou falhas de sistema).
+* **Desduplicação:** Correção de falhas de retentativa do gateway de pagamento, mantendo apenas a transação válida mais recente por parcela.
+* **Tratamento de Nulos (NaN):** Padronização de campos vazios para não quebrar os cálculos do painel (ex: nulos financeiros viraram `0.0`).
+
+### Camada Gold: Regras de Negócio e Anomalias
+Nesta etapa, aplicamos a inteligência de negócios para gerar as métricas finais consumidas pelos executivos (C-Level):
+* **Blindagem de Acordos (Churn):** Clientes que renegociam a dívida geram múltiplas linhas históricas. O pipeline isola apenas o "Último Acordo" como ativo, evitando a duplicação do saldo devedor.
+* **Captura de Juros (Overpayment):** Identificação de parcelas pagas com atraso cujo valor superou o acordado. A diferença foi separada na coluna `juros_pagamento_atraso` para mapear receitas extras.
+* **Auditoria de Marketing (Cobrança Indevida):** Criação de uma flag automática (`flag_cobranca_indevida`) que cruza as datas e alerta quando o sistema disparou mensagens para clientes que já haviam fechado acordo.
 
 ---
 
@@ -56,12 +66,12 @@ O design do painel (front-end) foi construído em **Streamlit**. A regra de ouro
 Responde à pergunta *"O quanto estamos trabalhando e convertendo?"*.
 * Inicia com o Funil de Conversão (do cliente contatado até a quitação), mostrando os gargalos da operação.
 
-<img width="1018" height="482" alt="image" src="https://github.com/user-attachments/assets/0640db58-e135-44a1-a784-9034e64a222a" />
+<img width="1062" height="390" alt="image" src="https://github.com/user-attachments/assets/0f3660d0-370a-4a82-bc54-49c4e846f3a9" />
 
 
 * Traz um gráfico de linha do tempo cruzando "Disparos vs. Respostas", provando visualmente se o volume de mensagens enviadas está gerando engajamento real no dia a dia.
 
-<img width="1491" height="518" alt="image" src="https://github.com/user-attachments/assets/132a9b88-2de1-426e-bc9e-d105c8e5627c" />
+<img width="1571" height="439" alt="image" src="https://github.com/user-attachments/assets/c67a066e-0e37-4d6b-9cd3-8369159d746b" />
 
 
 
@@ -69,26 +79,23 @@ Responde à pergunta *"O quanto estamos trabalhando e convertendo?"*.
 Responde à pergunta *"Quão bons são os acordos que estamos fechando?"*.
 * Apresenta Sinais Vitais em cards diretos (Desconto concedido, Taxa de Quebra/Renegociação e Taxas de Pagamento).
 
-<img width="1338" height="361" alt="image" src="https://github.com/user-attachments/assets/3fa6d8de-8284-40d7-a0d0-29879e8d5b10" />
-
+<img width="1395" height="319" alt="image" src="https://github.com/user-attachments/assets/0058c391-e6d1-4819-a060-6eff9b331c04" />
 
 * Utiliza gráficos de barras empilhadas e horizontais para ranquear Campanhas e Credores.
 
-<img width="1524" height="473" alt="image" src="https://github.com/user-attachments/assets/ac509420-094b-454d-aef4-ea39a06d817a" />
-
+<img width="1550" height="418" alt="image" src="https://github.com/user-attachments/assets/0e18dc0d-f287-4bdf-880c-55f298bbc628" />
 
 * **UX Avançada (Tooltips):** Os gráficos possuem caixas de informação customizadas. Ao passar o mouse sobre o Credor, o executivo vê não apenas o valor recuperado, mas o Desconto Médio e a Eficiência %, mantendo a tela limpa e entregando detalhes sob demanda.
 * **Tabela de Auditoria:** Uma visão detalhada que mantém o histórico de acordos Cancelados, Quitações e Em Pagamento, permitindo auditoria rápida de qualquer ID sem sair da tela.
 
-<img width="1518" height="450" alt="image" src="https://github.com/user-attachments/assets/c4753c04-7fc2-4e4b-b364-e873cf46f19e" />
-
+<img width="1557" height="403" alt="image" src="https://github.com/user-attachments/assets/e93bb3d4-3890-4c41-979e-567c336692a0" />
 
 
 ### Ato 3: O Bottom Line (Aba 3 - Explorador de Caixa)
 Responde à pergunta *"Quanto dinheiro efetivamente entrou na conta?"*.
 * Uma visão puramente financeira (Cash Flow), destacando o ticket médio, o método de pagamento preferido pelos devedores e uma matriz dinâmica para cruzar receitas por mês e por credor.
 
-<img width="1549" height="863" alt="image" src="https://github.com/user-attachments/assets/abfa11b5-d4b5-4cb7-b465-578509e38f8c" />
+<img width="1568" height="868" alt="image" src="https://github.com/user-attachments/assets/1c1655f6-13b1-450b-83b0-b935d5def9c1" />
 
 
 ---
