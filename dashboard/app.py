@@ -1,3 +1,4 @@
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -242,7 +243,10 @@ with tab2:
         st.markdown("#### 📋 Detalhamento Crítico (Histórico Completo de Acordos)")
         
         all_agreements = df_agr[df_agr['debt_id'].isin(df_filtered['debt_id'])].copy()
-        all_agreements = all_agreements.merge(df_filtered[['debt_id', 'creditor', 'debt_amount']], on='debt_id', how='left')
+        
+        # ---> ALTERAÇÃO AQUI: Trazendo as novas colunas da OBT <---
+        colunas_obt = ['debt_id', 'creditor', 'debt_amount', 'juros_pagamento_atraso', 'flag_cobranca_indevida']
+        all_agreements = all_agreements.merge(df_filtered[colunas_obt], on='debt_id', how='left')
         
         pay_agg_detalhe = df_pay.groupby('agreement_id').agg(
             total_paid=('amount', 'sum'),
@@ -253,10 +257,14 @@ with tab2:
         all_agreements['total_paid'] = all_agreements['total_paid'].fillna(0.0)
         all_agreements['installments_paid'] = all_agreements['installments_paid'].fillna(0).astype(int)
         
-        # BLINDAGEM DE PONTO FLUTUANTE AQUI
+        # BLINDAGEM DE PONTO FLUTUANTE E FORMATAÇÃO DAS NOVAS COLUNAS
         all_agreements['amount'] = all_agreements['amount'].round(2)
         all_agreements['total_paid'] = all_agreements['total_paid'].round(2)
         all_agreements['remaining_balance'] = (all_agreements['amount'] - all_agreements['total_paid']).clip(lower=0)
+        all_agreements['juros_pagamento_atraso'] = all_agreements['juros_pagamento_atraso'].fillna(0.0).round(2)
+        
+        # Transformando True/False em ícones visuais
+        all_agreements['flag_cobranca_indevida'] = all_agreements['flag_cobranca_indevida'].apply(lambda x: '🚨 Sim' if x == True else '✅ Não')
         
         all_agreements['discount_percentage'] = np.where(
             all_agreements['debt_amount'] > 0,
@@ -275,8 +283,9 @@ with tab2:
         choices_acordo = ['❌ Cancelado', '✅ Quitado', '⏳ Em Pagamento']
         all_agreements['Status'] = np.select(conditions_acordo, choices_acordo, default='📝 Acordo Fechado')
         
-        df_detalhe = all_agreements[['debt_id', 'agreement_id', 'creditor', 'amount', 'discount_percentage', 'total_paid', 'remaining_balance', 'installments', 'installments_paid', 'Status']]
-        df_detalhe.columns = ['ID Dívida', 'ID Acordo', 'Credor', 'Valor Acordado', '% Variação', 'Total Pago', 'Saldo Devedor', 'Qtd Parcelas', 'Parcelas Pagas', 'Status']
+        # ---> ALTERAÇÃO AQUI: Inserindo as colunas na visão final <---
+        df_detalhe = all_agreements[['debt_id', 'agreement_id', 'creditor', 'amount', 'discount_percentage', 'total_paid', 'remaining_balance', 'juros_pagamento_atraso', 'installments', 'installments_paid', 'flag_cobranca_indevida', 'Status']]
+        df_detalhe.columns = ['ID Dívida', 'ID Acordo', 'Credor', 'Valor Acordado', '% Variação', 'Total Pago', 'Saldo Devedor', 'Juros/Overpayment', 'Qtd Parcelas', 'Parcelas Pagas', 'Cobrança Indevida', 'Status']
         
         df_sorted = df_detalhe.sort_values(by=['ID Dívida', 'Status'], ascending=[True, False])
         
@@ -285,6 +294,7 @@ with tab2:
                 'Valor Acordado': formatar_moeda,
                 'Total Pago': formatar_moeda,
                 'Saldo Devedor': formatar_moeda,
+                'Juros/Overpayment': formatar_moeda, # Nova formatação de moeda
                 '% Variação': "{:.1f}%"
             }), 
             hide_index=True, 

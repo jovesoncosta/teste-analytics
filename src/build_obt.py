@@ -1,3 +1,4 @@
+
 import pandas as pd
 from pathlib import Path
 import numpy as np
@@ -15,7 +16,7 @@ def build_obt():
     agreements = pd.read_csv(CLEAN_DATA_DIR / "clean_agreements.csv")
     payments = pd.read_csv(CLEAN_DATA_DIR / "clean_payments.csv")
     
-    #Datas para datetime (medir tempo de conversão)
+    #Datas para datetime (medir tempo de conversão e cobrar indevida)
     dispatches['dispatched_at'] = pd.to_datetime(dispatches['dispatched_at'])
     agreements['agreed_at'] = pd.to_datetime(agreements['agreed_at'])
     
@@ -23,7 +24,8 @@ def build_obt():
     disp_agg = dispatches.groupby('debt_id').agg(
         num_dispatches=('dispatch_id', 'count'),
         campaign_id=('campaign_id', 'first'),
-        first_dispatch_date=('dispatched_at', 'min') 
+        first_dispatch_date=('dispatched_at', 'min'),
+        last_dispatch_date=('dispatched_at', 'max') # Adicionado para checar cobrança indevida
     ).reset_index()
     
     msg_disp = messages.merge(dispatches[['dispatch_id', 'debt_id']], on='dispatch_id', how='inner')
@@ -91,10 +93,38 @@ def build_obt():
     #Criado uma flag (True/False) indicando se o cliente quebrou o acordo anterior
     obt['is_renegotiated'] = obt['num_agreements'] > 1
     
+    # ---------------------------------------------------------------------
+    # NOVAS MÉTRICAS DE NEGÓCIO (ANOMALIAS)
+    # ---------------------------------------------------------------------
+    
+    # 1. Juros por Atraso de Pagamento (Overpayment)
+    # Se o total pago for maior que o acordado, a diferença vai para cá
+    obt['juros_pagamento_atraso'] = np.where(
+        (obt['num_agreements'] > 0) & (obt['total_paid'] > obt['agreed_amount']),
+        obt['total_paid'] - obt['agreed_amount'],
+        0.0
+    ).round(2)
+    
+    # 2. Cobrança Indevida (Disparo de Marketing após o Acordo)
+    # Se a data do último disparo for MAIOR que a data de fechamento do acordo ativo
+    obt['flag_cobranca_indevida'] = np.where(
+        (obt['num_agreements'] > 0) & 
+        (pd.notna(obt['last_dispatch_date'])) & 
+        (obt['last_dispatch_date'] > obt['active_agreed_at']),
+        True,
+        False
+    )
+    
+    # Limpando a coluna de last_dispatch_date para manter a OBT enxuta
+    obt = obt.drop(columns=['last_dispatch_date'])
+    
+    # ---------------------------------------------------------------------
+
     #MÉTRICAS FINANCEIRAS CLÁSSICAS
     obt['remaining_balance'] = np.where(obt['num_agreements'] > 0, 
                                         obt['agreed_amount'] - obt['total_paid'], 
                                         obt['debt_amount'])
+    # Se o cliente pagou a mais (overpayment), o saldo não pode ficar negativo, ele zera (clip)
     obt['remaining_balance'] = obt['remaining_balance'].clip(lower=0).round(2)
     
     obt['agreement_recovery_rate'] = np.where(obt['agreed_amount'] > 0, 

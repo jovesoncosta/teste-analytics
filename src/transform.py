@@ -1,3 +1,4 @@
+
 import pandas as pd
 from pathlib import Path
 from extract import load_csv, load_messages
@@ -40,6 +41,13 @@ def clean_payments(df_payments: pd.DataFrame, df_agreements: pd.DataFrame) -> pd
     #Remove pagamentos órfãos (sem acordo atrelado)
     valid_agreements = df_agreements['agreement_id'].unique()
     df_clean = df_clean[df_clean['agreement_id'].isin(valid_agreements)]
+    
+    # Resolve a duplicidade na mesma parcela mantendo a transação mais recente
+    df_clean = df_clean.sort_values(by='paid_at').drop_duplicates(
+        subset=['agreement_id', 'installment_number'], 
+        keep='last'
+    )
+    
     return df_clean
 
 def run_cleaning_pipeline():
