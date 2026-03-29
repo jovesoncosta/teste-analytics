@@ -22,7 +22,7 @@ Para garantir que o processamento dos dados ocorra de forma automática e isolad
 
 * **O Maestro (Airflow):** O Apache Airflow atua como o orquestrador do nosso pipeline. Ele possui uma DAG (grafo de tarefas) que dita a ordem exata do ETL: primeiro extrai, depois limpa (Silver) e, por último, constrói a tabela final (Gold).
 
-<img width="1865" height="650" alt="image" src="https://github.com/user-attachments/assets/c7c60b1d-77a1-48f9-a9ce-6fbb431897cb" />
+<img width="1864" height="666" alt="image" src="https://github.com/user-attachments/assets/c30da26f-110b-49ca-a0e5-b1585edefb49" />
 
 
 * **Separação de Responsabilidades:** O Airflow roda nos bastidores (processamento *batch*) e desliga quando termina. Ele não interfere no Dashboard (Streamlit), que fica disponível 24/7 apenas consumindo os dados prontos da camada Gold. Se o Airflow falhar hoje, o painel continua no ar mostrando os dados de ontem.
