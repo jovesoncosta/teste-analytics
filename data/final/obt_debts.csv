@@ -1,0 +1,184 @@
+debt_id,customer_id,debt_amount,due_date,creditor,num_dispatches,campaign_id,first_dispatch_date,has_response,agreed_amount,total_installments,installments_paid,total_paid,active_agreed_at,num_agreements,days_to_agreement,discount_percentage,is_renegotiated,remaining_balance,agreement_recovery_rate,status_fluxo
+debt_0001,cust_4262,6802.45,2025-11-09,Banco XYZ,2,camp_varejo,2026-03-01 08:15:30,True,511.71,9,9,512.63,2026-03-03 09:14:07,1,2.0,92.48,False,0.0,100.18,Quitado
+debt_0002,cust_5118,872.46,2025-12-27,Loja ABC,2,camp_varejo,2026-03-01 11:20:07,True,2342.11,10,0,0.0,2026-03-03 12:38:55,1,2.0,-168.45,False,2342.11,0.0,Acordo Fechado
+debt_0003,cust_9464,3736.3,2026-01-18,Loja ABC,2,camp_varejo,2026-03-01 11:46:26,False,0.0,0,0,0.0,,0,,0.0,False,3736.3,0.0,Contatado
+debt_0004,cust_6912,2612.46,2026-01-25,Banco XYZ,2,camp_varejo,2026-03-01 12:24:20,True,0.0,0,0,0.0,,0,,0.0,False,2612.46,0.0,Engajado
+debt_0005,cust_8195,1131.66,2026-01-31,Banco XYZ,2,camp_varejo,2026-03-01 12:55:30,False,1935.16,4,1,475.21,2026-03-05 01:34:25,1,3.0,-71.0,False,1459.95,24.56,Em Pagamento
+debt_0006,cust_9056,5671.7,2025-11-22,Telecom Sul,2,camp_varejo,2026-03-01 15:39:36,True,0.0,0,0,0.0,,0,,0.0,False,5671.7,0.0,Engajado
+debt_0007,cust_2697,7633.53,2026-01-07,Varejo Express,2,camp_varejo,2026-03-01 18:03:14,True,1619.07,8,1,201.12,2026-03-02 15:45:14,1,0.0,78.79,False,1417.95,12.42,Em Pagamento
+debt_0008,cust_5557,6307.3,2025-12-05,Banco XYZ,2,camp_varejo,2026-03-01 18:12:25,True,0.0,0,0,0.0,,0,,0.0,False,6307.3,0.0,Engajado
+debt_0009,cust_1508,3100.58,2025-12-06,Loja ABC,2,camp_varejo,2026-03-02 08:39:09,False,0.0,0,0,0.0,,0,,0.0,False,3100.58,0.0,Contatado
+debt_0010,cust_2869,6217.16,2025-11-05,Financeira 123,2,camp_varejo,2026-03-02 11:24:44,True,0.0,0,0,0.0,,0,,0.0,False,6217.16,0.0,Engajado
+debt_0011,cust_2535,6495.44,2025-12-06,Varejo Express,2,camp_varejo,2026-03-02 16:38:01,True,0.0,0,0,0.0,,0,,0.0,False,6495.44,0.0,Engajado
+debt_0012,cust_6155,698.2,2026-01-14,Loja ABC,2,camp_varejo,2026-03-02 17:19:05,True,4873.87,8,2,1216.55,2026-03-03 18:40:05,2,1.0,-598.06,True,3657.32,24.96,Em Pagamento
+debt_0013,cust_8517,4069.95,2026-01-06,Financeira 123,2,camp_varejo,2026-03-03 10:15:47,True,1073.42,3,3,1081.48,2026-03-06 07:54:59,1,2.0,73.63,False,0.0,100.75,Quitado
+debt_0014,cust_9379,632.43,2026-01-13,Banco XYZ,2,camp_varejo,2026-03-03 10:34:49,True,0.0,0,0,0.0,,0,,0.0,False,632.43,0.0,Engajado
+debt_0015,cust_2530,3067.96,2025-12-04,Loja ABC,2,camp_varejo,2026-03-04 17:36:42,False,0.0,0,0,0.0,,0,,0.0,False,3067.96,0.0,Contatado
+debt_0016,cust_9883,7175.29,2026-01-27,Loja ABC,2,camp_varejo,2026-03-04 18:07:36,False,0.0,0,0,0.0,,0,,0.0,False,7175.29,0.0,Contatado
+debt_0017,cust_2638,1981.55,2026-01-06,Loja ABC,2,camp_varejo,2026-03-05 11:32:16,True,936.5,8,0,0.0,2026-03-05 15:10:16,1,0.0,52.74,False,936.5,0.0,Acordo Fechado
+debt_0018,cust_1090,543.5,2025-11-03,Banco XYZ,2,camp_varejo,2026-03-05 11:45:19,False,3091.78,3,2,2073.16,2026-03-07 20:41:11,1,2.0,-468.86,False,1018.62,67.05,Em Pagamento
+debt_0019,cust_1444,558.66,2025-12-18,Telecom Sul,2,camp_varejo,2026-03-05 13:31:01,False,0.0,0,0,0.0,,0,,0.0,False,558.66,0.0,Contatado
+debt_0020,cust_2489,7377.77,2025-11-24,Loja ABC,2,camp_varejo,2026-03-05 14:38:38,False,0.0,0,0,0.0,,0,,0.0,False,7377.77,0.0,Contatado
+debt_0021,cust_7939,4512.35,2026-01-24,Telecom Sul,1,camp_pme,2026-03-01 08:21:49,False,0.0,0,0,0.0,,0,,0.0,False,4512.35,0.0,Contatado
+debt_0022,cust_3073,1951.22,2025-12-03,Telecom Sul,1,camp_pme,2026-03-01 08:35:18,True,0.0,0,0,0.0,,0,,0.0,False,1951.22,0.0,Engajado
+debt_0023,cust_8007,7343.67,2025-12-12,Financeira 123,1,camp_inadimplencia,2026-03-01 09:04:56,True,0.0,0,0,0.0,,0,,0.0,False,7343.67,0.0,Engajado
+debt_0024,cust_4527,6642.78,2026-01-14,Financeira 123,1,camp_pme,2026-03-01 09:24:06,False,0.0,0,0,0.0,,0,,0.0,False,6642.78,0.0,Contatado
+debt_0025,cust_4946,1131.33,2026-01-27,Loja ABC,1,camp_inadimplencia,2026-03-01 09:46:31,False,0.0,0,0,0.0,,0,,0.0,False,1131.33,0.0,Contatado
+debt_0026,cust_9785,1598.89,2026-01-07,Loja ABC,1,camp_pme,2026-03-01 09:56:16,False,0.0,0,0,0.0,,0,,0.0,False,1598.89,0.0,Contatado
+debt_0027,cust_3847,7641.82,2025-11-10,Telecom Sul,1,camp_inadimplencia,2026-03-01 10:00:26,True,1093.03,9,10,1211.18,2026-03-01 12:47:26,1,0.0,85.7,False,0.0,110.81,Quitado
+debt_0028,cust_6260,6955.05,2025-12-11,Financeira 123,1,camp_inadimplencia,2026-03-01 10:21:26,False,0.0,0,0,0.0,,0,,0.0,False,6955.05,0.0,Contatado
+debt_0029,cust_4502,873.81,2025-12-30,Loja ABC,1,camp_pme,2026-03-01 10:24:00,True,0.0,0,0,0.0,,0,,0.0,False,873.81,0.0,Engajado
+debt_0030,cust_9479,3077.57,2025-12-09,Varejo Express,1,camp_pme,2026-03-01 11:14:04,False,0.0,0,0,0.0,,0,,0.0,False,3077.57,0.0,Contatado
+debt_0031,cust_3170,6319.16,2026-01-20,Banco XYZ,1,camp_pme,2026-03-01 11:23:18,False,0.0,0,0,0.0,,0,,0.0,False,6319.16,0.0,Contatado
+debt_0032,cust_1601,3818.63,2026-01-16,Telecom Sul,1,camp_pme,2026-03-01 13:16:20,False,0.0,0,0,0.0,,0,,0.0,False,3818.63,0.0,Contatado
+debt_0033,cust_7232,7982.74,2025-11-27,Varejo Express,1,camp_pme,2026-03-01 13:19:48,False,0.0,0,0,0.0,,0,,0.0,False,7982.74,0.0,Contatado
+debt_0034,cust_3442,6131.76,2025-12-03,Banco XYZ,1,camp_inadimplencia,2026-03-01 13:37:35,False,0.0,0,0,0.0,,0,,0.0,False,6131.76,0.0,Contatado
+debt_0035,cust_8527,249.75,2025-12-24,Loja ABC,1,camp_inadimplencia,2026-03-01 14:05:35,False,0.0,0,0,0.0,,0,,0.0,False,249.75,0.0,Contatado
+debt_0036,cust_7882,2017.38,2025-12-16,Loja ABC,1,camp_pme,2026-03-01 14:23:40,True,0.0,0,0,0.0,,0,,0.0,False,2017.38,0.0,Engajado
+debt_0037,cust_7209,7617.72,2025-11-02,Telecom Sul,1,camp_pme,2026-03-01 15:54:20,False,0.0,0,0,0.0,,0,,0.0,False,7617.72,0.0,Contatado
+debt_0038,cust_2341,6822.25,2025-12-11,Loja ABC,1,camp_pme,2026-03-01 16:03:22,False,0.0,0,0,0.0,,0,,0.0,False,6822.25,0.0,Contatado
+debt_0039,cust_4241,1800.52,2025-12-02,Telecom Sul,1,camp_pme,2026-03-01 16:14:41,False,0.0,0,0,0.0,,0,,0.0,False,1800.52,0.0,Contatado
+debt_0040,cust_9486,4037.83,2025-11-09,Banco XYZ,1,camp_pme,2026-03-01 16:15:58,False,0.0,0,0,0.0,,0,,0.0,False,4037.83,0.0,Contatado
+debt_0041,cust_3683,5750.89,2025-11-13,Loja ABC,1,camp_pme,2026-03-01 17:01:59,True,596.54,7,1,84.26,2026-03-02 11:52:59,1,0.0,89.63,False,512.28,14.12,Em Pagamento
+debt_0042,cust_4673,7385.94,2026-01-07,Telecom Sul,1,camp_inadimplencia,2026-03-01 18:02:48,True,0.0,0,0,0.0,,0,,0.0,False,7385.94,0.0,Engajado
+debt_0043,cust_3286,5666.61,2025-12-19,Telecom Sul,1,camp_inadimplencia,2026-03-01 18:47:57,True,0.0,0,0,0.0,,0,,0.0,False,5666.61,0.0,Engajado
+debt_0044,cust_3426,7801.53,2025-11-12,Varejo Express,1,camp_pme,2026-03-02 08:19:23,False,0.0,0,0,0.0,,0,,0.0,False,7801.53,0.0,Contatado
+debt_0045,cust_8749,945.5,2025-11-19,Telecom Sul,1,camp_pme,2026-03-02 09:06:42,True,0.0,0,0,0.0,,0,,0.0,False,945.5,0.0,Engajado
+debt_0046,cust_3503,783.68,2026-01-13,Loja ABC,1,camp_inadimplencia,2026-03-02 09:26:26,False,0.0,0,0,0.0,,0,,0.0,False,783.68,0.0,Contatado
+debt_0047,cust_5563,3592.87,2025-11-18,Banco XYZ,1,camp_pme,2026-03-02 09:28:51,False,0.0,0,0,0.0,,0,,0.0,False,3592.87,0.0,Contatado
+debt_0048,cust_7543,2475.07,2025-12-12,Telecom Sul,1,camp_pme,2026-03-02 10:32:31,True,3650.57,9,0,0.0,2026-03-03 13:17:31,1,1.0,-47.49,False,3650.57,0.0,Acordo Fechado
+debt_0049,cust_9779,5665.66,2025-12-13,Financeira 123,1,camp_inadimplencia,2026-03-02 11:13:47,True,4599.1,8,1,583.21,2026-03-03 06:57:47,1,0.0,18.82,False,4015.89,12.68,Em Pagamento
+debt_0050,cust_8973,3731.51,2025-12-01,Loja ABC,1,camp_varejo,2026-03-02 12:13:03,False,0.0,0,0,0.0,,0,,0.0,False,3731.51,0.0,Contatado
+debt_0051,cust_4613,7559.73,2025-11-19,Varejo Express,1,camp_pme,2026-03-02 12:27:31,True,0.0,0,0,0.0,,0,,0.0,False,7559.73,0.0,Engajado
+debt_0052,cust_8787,1049.99,2025-11-15,Banco XYZ,1,camp_inadimplencia,2026-03-02 12:33:55,False,0.0,0,0,0.0,,0,,0.0,False,1049.99,0.0,Contatado
+debt_0053,cust_4920,3706.62,2025-12-12,Telecom Sul,1,camp_inadimplencia,2026-03-02 12:35:00,False,0.0,0,0,0.0,,0,,0.0,False,3706.62,0.0,Contatado
+debt_0054,cust_3979,1141.75,2025-12-17,Banco XYZ,1,camp_pme,2026-03-02 13:51:16,False,0.0,0,0,0.0,,0,,0.0,False,1141.75,0.0,Contatado
+debt_0055,cust_8532,3724.95,2025-12-31,Financeira 123,1,camp_inadimplencia,2026-03-02 14:11:46,True,4749.94,2,2,4730.78,2026-03-04 08:01:46,1,1.0,-27.52,False,19.16,99.6,Em Pagamento
+debt_0056,cust_5808,6849.36,2025-11-13,Banco XYZ,1,camp_pme,2026-03-02 15:00:46,True,0.0,0,0,0.0,,0,,0.0,False,6849.36,0.0,Engajado
+debt_0057,cust_9976,6499.26,2025-12-10,Varejo Express,1,camp_pme,2026-03-02 15:28:16,False,0.0,0,0,0.0,,0,,0.0,False,6499.26,0.0,Contatado
+debt_0058,cust_2988,514.57,2025-12-13,Banco XYZ,1,camp_pme,2026-03-02 15:42:33,True,0.0,0,0,0.0,,0,,0.0,False,514.57,0.0,Engajado
+debt_0059,cust_7624,911.46,2025-12-03,Financeira 123,1,camp_inadimplencia,2026-03-02 15:58:08,False,0.0,0,0,0.0,,0,,0.0,False,911.46,0.0,Contatado
+debt_0060,cust_1653,3290.71,2025-11-08,Financeira 123,1,camp_pme,2026-03-02 18:15:42,True,0.0,0,0,0.0,,0,,0.0,False,3290.71,0.0,Engajado
+debt_0061,cust_9280,2229.3,2025-11-24,Loja ABC,1,camp_pme,2026-03-03 08:05:40,False,0.0,0,0,0.0,,0,,0.0,False,2229.3,0.0,Contatado
+debt_0062,cust_3925,7626.35,2025-12-29,Varejo Express,1,camp_inadimplencia,2026-03-03 08:06:38,False,0.0,0,0,0.0,,0,,0.0,False,7626.35,0.0,Contatado
+debt_0063,cust_4598,6035.01,2025-12-03,Loja ABC,1,camp_inadimplencia,2026-03-03 08:14:52,False,0.0,0,0,0.0,,0,,0.0,False,6035.01,0.0,Contatado
+debt_0064,cust_8359,3803.94,2025-11-19,Loja ABC,1,camp_inadimplencia,2026-03-03 08:48:51,False,0.0,0,0,0.0,,0,,0.0,False,3803.94,0.0,Contatado
+debt_0065,cust_7596,293.26,2025-11-30,Banco XYZ,1,camp_inadimplencia,2026-03-03 09:15:12,False,0.0,0,0,0.0,,0,,0.0,False,293.26,0.0,Contatado
+debt_0066,cust_3143,1745.44,2025-12-23,Financeira 123,1,camp_inadimplencia,2026-03-03 10:47:28,True,1537.71,2,2,1515.91,2026-03-04 08:28:28,1,0.0,11.9,False,21.8,98.58,Em Pagamento
+debt_0067,cust_1006,5553.03,2026-01-23,Loja ABC,1,camp_pme,2026-03-03 11:27:50,True,4651.16,11,0,0.0,2026-03-05 10:12:50,1,1.0,16.24,False,4651.16,0.0,Acordo Fechado
+debt_0068,cust_4467,4742.13,2025-12-05,Loja ABC,1,camp_pme,2026-03-03 13:48:56,False,0.0,0,0,0.0,,0,,0.0,False,4742.13,0.0,Contatado
+debt_0069,cust_4841,370.04,2025-11-10,Banco XYZ,1,camp_pme,2026-03-03 13:57:34,False,613.83,5,5,612.19,2026-03-05 06:53:34,1,1.0,-65.88,False,1.64,99.73,Em Pagamento
+debt_0070,cust_1200,7239.47,2025-12-28,Banco XYZ,1,camp_inadimplencia,2026-03-03 15:30:28,True,1741.81,2,2,1730.54,2026-03-05 02:48:28,1,1.0,75.94,False,11.27,99.35,Em Pagamento
+debt_0071,cust_3041,917.43,2025-12-14,Loja ABC,1,camp_inadimplencia,2026-03-03 16:19:42,False,0.0,0,0,0.0,,0,,0.0,False,917.43,0.0,Contatado
+debt_0072,cust_5050,533.03,2025-12-31,Loja ABC,1,camp_inadimplencia,2026-03-03 16:31:40,True,0.0,0,0,0.0,,0,,0.0,False,533.03,0.0,Engajado
+debt_0073,cust_3546,1510.32,2026-01-14,Telecom Sul,1,camp_pme,2026-03-03 17:13:45,False,0.0,0,0,0.0,,0,,0.0,False,1510.32,0.0,Contatado
+debt_0074,cust_9548,6609.15,2025-12-22,Telecom Sul,1,camp_inadimplencia,2026-03-03 17:51:58,True,0.0,0,0,0.0,,0,,0.0,False,6609.15,0.0,Engajado
+debt_0075,cust_2743,429.96,2026-01-28,Telecom Sul,1,camp_inadimplencia,2026-03-03 18:32:38,True,0.0,0,0,0.0,,0,,0.0,False,429.96,0.0,Engajado
+debt_0076,cust_1475,1547.9,2025-11-29,Banco XYZ,1,camp_pme,2026-03-03 18:43:51,False,0.0,0,0,0.0,,0,,0.0,False,1547.9,0.0,Contatado
+debt_0077,cust_9889,2344.86,2025-12-29,Banco XYZ,1,camp_pme,2026-03-04 08:12:33,True,4935.56,11,0,0.0,2026-03-06 05:06:33,1,1.0,-110.48,False,4935.56,0.0,Acordo Fechado
+debt_0078,cust_1727,470.27,2026-01-20,Varejo Express,1,camp_inadimplencia,2026-03-04 08:33:59,True,555.99,8,2,139.44,2026-03-05 06:14:59,1,0.0,-18.23,False,416.55,25.08,Em Pagamento
+debt_0079,cust_4919,2117.12,2025-12-09,Telecom Sul,1,camp_pme,2026-03-04 09:45:18,False,0.0,0,0,0.0,,0,,0.0,False,2117.12,0.0,Contatado
+debt_0080,cust_4116,3413.54,2026-01-11,Telecom Sul,1,camp_inadimplencia,2026-03-04 10:27:11,True,2037.7,10,10,2038.1,2026-03-05 10:50:11,1,1.0,40.31,False,0.0,100.02,Quitado
+debt_0081,cust_7291,675.64,2025-12-07,Telecom Sul,1,camp_pme,2026-03-04 11:09:41,True,0.0,0,0,0.0,,0,,0.0,False,675.64,0.0,Engajado
+debt_0082,cust_2419,1270.44,2025-11-27,Varejo Express,1,camp_pme,2026-03-04 11:48:29,True,4001.92,4,0,0.0,2026-03-04 20:00:29,1,0.0,-215.0,False,4001.92,0.0,Acordo Fechado
+debt_0083,cust_1525,2143.35,2026-01-10,Loja ABC,1,camp_pme,2026-03-04 12:04:13,False,0.0,0,0,0.0,,0,,0.0,False,2143.35,0.0,Contatado
+debt_0084,cust_7691,7917.35,2025-12-17,Telecom Sul,1,camp_pme,2026-03-04 12:35:08,False,0.0,0,0,0.0,,0,,0.0,False,7917.35,0.0,Contatado
+debt_0085,cust_5871,4447.24,2026-01-03,Financeira 123,1,camp_inadimplencia,2026-03-04 12:36:39,False,967.94,1,1,971.21,2026-03-06 13:19:39,1,2.0,78.24,False,0.0,100.34,Quitado
+debt_0086,cust_3615,7318.88,2026-01-05,Financeira 123,1,camp_inadimplencia,2026-03-04 13:17:09,True,0.0,0,0,0.0,,0,,0.0,False,7318.88,0.0,Engajado
+debt_0087,cust_6421,3229.37,2025-11-25,Loja ABC,1,camp_inadimplencia,2026-03-04 14:03:13,True,0.0,0,0,0.0,,0,,0.0,False,3229.37,0.0,Engajado
+debt_0088,cust_8062,2687.25,2025-11-30,Loja ABC,1,camp_pme,2026-03-04 14:29:55,True,4991.12,5,2,1960.44,2026-03-05 14:08:55,1,0.0,-85.73,False,3030.68,39.28,Em Pagamento
+debt_0089,cust_9817,7186.97,2025-12-07,Loja ABC,1,camp_pme,2026-03-04 14:52:46,False,0.0,0,0,0.0,,0,,0.0,False,7186.97,0.0,Contatado
+debt_0090,cust_6279,6507.5,2026-01-01,Varejo Express,1,camp_pme,2026-03-04 15:43:13,False,0.0,0,0,0.0,,0,,0.0,False,6507.5,0.0,Contatado
+debt_0091,cust_4697,2987.98,2026-01-15,Banco XYZ,1,camp_inadimplencia,2026-03-04 15:58:28,True,2149.81,9,0,0.0,2026-03-06 11:38:28,1,1.0,28.05,False,2149.81,0.0,Acordo Fechado
+debt_0092,cust_7252,7797.04,2025-11-14,Banco XYZ,1,camp_inadimplencia,2026-03-04 16:16:35,False,0.0,0,0,0.0,,0,,0.0,False,7797.04,0.0,Contatado
+debt_0093,cust_3621,5323.54,2025-12-06,Varejo Express,1,camp_inadimplencia,2026-03-04 17:04:24,True,0.0,0,0,0.0,,0,,0.0,False,5323.54,0.0,Engajado
+debt_0094,cust_2193,6567.02,2025-11-09,Banco XYZ,1,camp_pme,2026-03-04 18:36:12,False,0.0,0,0,0.0,,0,,0.0,False,6567.02,0.0,Contatado
+debt_0095,cust_5033,4690.4,2025-12-21,Financeira 123,1,camp_inadimplencia,2026-03-05 08:39:05,False,0.0,0,0,0.0,,0,,0.0,False,4690.4,0.0,Contatado
+debt_0096,cust_3749,7494.61,2025-11-24,Banco XYZ,1,camp_inadimplencia,2026-03-05 09:49:52,False,0.0,0,0,0.0,,0,,0.0,False,7494.61,0.0,Contatado
+debt_0097,cust_5941,2045.1,2025-12-12,Financeira 123,1,camp_inadimplencia,2026-03-05 09:50:36,False,0.0,0,0,0.0,,0,,0.0,False,2045.1,0.0,Contatado
+debt_0098,cust_3851,7329.04,2025-11-05,Financeira 123,1,camp_inadimplencia,2026-03-05 12:25:35,True,2741.41,7,1,395.26,2026-03-07 01:33:35,1,1.0,62.6,False,2346.15,14.42,Em Pagamento
+debt_0099,cust_6576,7590.96,2026-01-13,Banco XYZ,1,camp_pme,2026-03-05 12:35:00,False,0.0,0,0,0.0,,0,,0.0,False,7590.96,0.0,Contatado
+debt_0100,cust_6881,4592.25,2025-11-26,Telecom Sul,1,camp_pme,2026-03-05 12:51:02,False,0.0,0,0,0.0,,0,,0.0,False,4592.25,0.0,Contatado
+debt_0101,cust_5803,4428.57,2025-11-24,Telecom Sul,1,camp_inadimplencia,2026-03-05 13:36:12,False,0.0,0,0,0.0,,0,,0.0,False,4428.57,0.0,Contatado
+debt_0102,cust_1672,496.12,2025-11-09,Banco XYZ,1,camp_pme,2026-03-05 14:42:23,True,0.0,0,0,0.0,,0,,0.0,False,496.12,0.0,Engajado
+debt_0103,cust_6753,4892.97,2025-11-04,Varejo Express,1,camp_inadimplencia,2026-03-05 14:43:53,False,0.0,0,0,0.0,,0,,0.0,False,4892.97,0.0,Contatado
+debt_0104,cust_8381,3928.31,2025-12-14,Varejo Express,1,camp_inadimplencia,2026-03-05 15:18:02,True,0.0,0,0,0.0,,0,,0.0,False,3928.31,0.0,Engajado
+debt_0105,cust_5460,1771.42,2025-11-18,Financeira 123,1,camp_inadimplencia,2026-03-05 15:28:05,False,0.0,0,0,0.0,,0,,0.0,False,1771.42,0.0,Contatado
+debt_0106,cust_6539,5792.11,2025-12-13,Loja ABC,1,camp_varejo,2026-03-05 16:14:37,True,0.0,0,0,0.0,,0,,0.0,False,5792.11,0.0,Engajado
+debt_0107,cust_7046,370.92,2026-01-16,Banco XYZ,1,camp_pme,2026-03-05 16:22:27,False,0.0,0,0,0.0,,0,,0.0,False,370.92,0.0,Contatado
+debt_0108,cust_6198,6240.06,2026-01-08,Financeira 123,1,camp_pme,2026-03-05 16:27:53,True,0.0,0,0,0.0,,0,,0.0,False,6240.06,0.0,Engajado
+debt_0109,cust_7389,7692.36,2025-12-19,Telecom Sul,1,camp_pme,2026-03-05 16:51:38,False,0.0,0,0,0.0,,0,,0.0,False,7692.36,0.0,Contatado
+debt_0110,cust_3167,4770.93,2025-12-15,Financeira 123,1,camp_inadimplencia,2026-03-05 17:30:15,False,0.0,0,0,0.0,,0,,0.0,False,4770.93,0.0,Contatado
+debt_0111,cust_7868,2716.3,2025-11-22,Telecom Sul,1,camp_inadimplencia,2026-03-05 17:33:20,False,0.0,0,0,0.0,,0,,0.0,False,2716.3,0.0,Contatado
+debt_0112,cust_3718,6376.37,2026-01-03,Financeira 123,1,camp_pme,2026-03-05 17:58:18,False,0.0,0,0,0.0,,0,,0.0,False,6376.37,0.0,Contatado
+debt_0113,cust_4249,1558.78,2026-01-12,Varejo Express,1,camp_varejo,2026-03-05 18:15:06,False,0.0,0,0,0.0,,0,,0.0,False,1558.78,0.0,Contatado
+debt_0114,cust_3870,6338.54,2025-11-30,Varejo Express,1,camp_pme,2026-03-05 18:28:58,True,1963.27,9,0,0.0,2026-03-07 15:59:58,1,1.0,69.03,False,1963.27,0.0,Acordo Fechado
+debt_0115,cust_4457,6552.74,2025-12-20,Financeira 123,1,camp_pme,2026-03-06 09:10:15,True,0.0,0,0,0.0,,0,,0.0,False,6552.74,0.0,Engajado
+debt_0116,cust_1188,5925.16,2025-12-09,Banco XYZ,1,camp_inadimplencia,2026-03-06 09:43:56,False,1853.67,9,0,0.0,2026-03-08 06:16:56,1,1.0,68.72,False,1853.67,0.0,Acordo Fechado
+debt_0117,cust_1986,1586.12,2025-11-02,Varejo Express,1,camp_inadimplencia,2026-03-06 09:48:13,False,0.0,0,0,0.0,,0,,0.0,False,1586.12,0.0,Contatado
+debt_0118,cust_2169,3254.49,2026-01-13,Loja ABC,1,camp_inadimplencia,2026-03-06 10:34:46,True,0.0,0,0,0.0,,0,,0.0,False,3254.49,0.0,Engajado
+debt_0119,cust_7658,1620.24,2025-12-12,Varejo Express,1,camp_inadimplencia,2026-03-06 10:59:59,True,0.0,0,0,0.0,,0,,0.0,False,1620.24,0.0,Engajado
+debt_0120,cust_4630,1922.98,2026-01-13,Loja ABC,1,camp_pme,2026-03-06 11:19:42,False,0.0,0,0,0.0,,0,,0.0,False,1922.98,0.0,Contatado
+debt_0121,cust_2139,7506.16,2025-11-20,Financeira 123,1,camp_varejo,2026-03-06 11:49:18,False,0.0,0,0,0.0,,0,,0.0,False,7506.16,0.0,Contatado
+debt_0122,cust_8438,6013.68,2025-12-02,Financeira 123,1,camp_varejo,2026-03-06 11:59:16,True,2330.91,2,0,0.0,2026-03-07 12:22:16,1,1.0,61.24,False,2330.91,0.0,Acordo Fechado
+debt_0123,cust_2824,7862.56,2025-11-23,Loja ABC,1,camp_varejo,2026-03-06 12:15:14,False,0.0,0,0,0.0,,0,,0.0,False,7862.56,0.0,Contatado
+debt_0124,cust_3522,6608.96,2026-01-26,Financeira 123,1,camp_pme,2026-03-06 12:32:45,False,0.0,0,0,0.0,,0,,0.0,False,6608.96,0.0,Contatado
+debt_0125,cust_4792,3683.71,2025-12-05,Banco XYZ,1,camp_pme,2026-03-06 12:44:55,True,0.0,0,0,0.0,,0,,0.0,False,3683.71,0.0,Engajado
+debt_0126,cust_6820,2146.42,2025-11-10,Financeira 123,1,camp_varejo,2026-03-06 12:44:59,True,0.0,0,0,0.0,,0,,0.0,False,2146.42,0.0,Engajado
+debt_0127,cust_4571,2201.93,2025-11-15,Loja ABC,1,camp_pme,2026-03-06 12:49:23,False,0.0,0,0,0.0,,0,,0.0,False,2201.93,0.0,Contatado
+debt_0128,cust_2129,575.55,2025-12-28,Telecom Sul,1,camp_inadimplencia,2026-03-06 13:00:54,False,0.0,0,0,0.0,,0,,0.0,False,575.55,0.0,Contatado
+debt_0129,cust_5272,7758.99,2025-12-24,Telecom Sul,1,camp_varejo,2026-03-06 13:15:16,False,0.0,0,0,0.0,,0,,0.0,False,7758.99,0.0,Contatado
+debt_0130,cust_8119,7077.81,2025-12-16,Varejo Express,1,camp_pme,2026-03-06 13:27:38,True,0.0,0,0,0.0,,0,,0.0,False,7077.81,0.0,Engajado
+debt_0131,cust_7537,3127.71,2026-01-02,Varejo Express,1,camp_inadimplencia,2026-03-06 13:28:57,False,0.0,0,0,0.0,,0,,0.0,False,3127.71,0.0,Contatado
+debt_0132,cust_1653,5277.56,2026-01-28,Banco XYZ,1,camp_pme,2026-03-06 13:38:16,True,0.0,0,0,0.0,,0,,0.0,False,5277.56,0.0,Engajado
+debt_0133,cust_1406,1468.72,2025-11-11,Loja ABC,1,camp_varejo,2026-03-06 13:50:59,False,0.0,0,0,0.0,,0,,0.0,False,1468.72,0.0,Contatado
+debt_0134,cust_6111,2500.29,2025-12-12,Financeira 123,1,camp_inadimplencia,2026-03-06 14:25:45,False,0.0,0,0,0.0,,0,,0.0,False,2500.29,0.0,Contatado
+debt_0135,cust_4143,7622.96,2025-11-11,Financeira 123,1,camp_pme,2026-03-06 14:43:47,False,0.0,0,0,0.0,,0,,0.0,False,7622.96,0.0,Contatado
+debt_0136,cust_9117,1526.82,2025-12-20,Banco XYZ,1,camp_pme,2026-03-06 14:52:48,True,0.0,0,0,0.0,,0,,0.0,False,1526.82,0.0,Engajado
+debt_0137,cust_5719,5909.48,2026-01-11,Loja ABC,1,camp_pme,2026-03-06 15:07:01,False,0.0,0,0,0.0,,0,,0.0,False,5909.48,0.0,Contatado
+debt_0138,cust_4899,2836.01,2026-01-19,Telecom Sul,1,camp_pme,2026-03-06 15:13:34,False,0.0,0,0,0.0,,0,,0.0,False,2836.01,0.0,Contatado
+debt_0139,cust_6419,5695.14,2025-12-27,Banco XYZ,1,camp_pme,2026-03-06 15:17:19,True,522.72,11,3,141.14,2026-03-06 18:25:19,1,0.0,90.82,False,381.58,27.0,Em Pagamento
+debt_0140,cust_9666,4937.08,2025-12-27,Banco XYZ,1,camp_varejo,2026-03-06 16:19:59,False,0.0,0,0,0.0,,0,,0.0,False,4937.08,0.0,Contatado
+debt_0141,cust_4257,617.73,2025-12-14,Banco XYZ,1,camp_inadimplencia,2026-03-06 16:26:14,True,2896.03,5,4,2303.74,2026-03-07 18:24:14,1,1.0,-368.82,False,592.29,79.55,Em Pagamento
+debt_0142,cust_2604,7800.31,2025-12-24,Varejo Express,1,camp_varejo,2026-03-06 16:53:00,True,0.0,0,0,0.0,,0,,0.0,False,7800.31,0.0,Engajado
+debt_0143,cust_9830,5831.9,2026-01-10,Financeira 123,1,camp_pme,2026-03-06 17:27:57,True,0.0,0,0,0.0,,0,,0.0,False,5831.9,0.0,Engajado
+debt_0144,cust_8933,5352.66,2025-12-10,Banco XYZ,1,camp_pme,2026-03-06 17:48:33,False,0.0,0,0,0.0,,0,,0.0,False,5352.66,0.0,Contatado
+debt_0145,cust_1887,948.14,2025-12-22,Varejo Express,1,camp_inadimplencia,2026-03-06 18:06:03,False,0.0,0,0,0.0,,0,,0.0,False,948.14,0.0,Contatado
+debt_0146,cust_9821,4487.37,2026-01-03,Banco XYZ,1,camp_inadimplencia,2026-03-06 18:12:23,False,0.0,0,0,0.0,,0,,0.0,False,4487.37,0.0,Contatado
+debt_0147,cust_7484,625.14,2025-11-02,Telecom Sul,1,camp_varejo,2026-03-06 18:19:29,True,1932.3,10,0,0.0,2026-03-08 02:20:29,1,1.0,-209.1,False,1932.3,0.0,Acordo Fechado
+debt_0148,cust_5649,883.5,2026-01-25,Varejo Express,1,camp_inadimplencia,2026-03-06 18:39:21,False,2245.36,12,12,2238.35,2026-03-08 10:24:21,1,1.0,-154.14,False,7.01,99.69,Em Pagamento
+debt_0149,cust_6617,3946.56,2025-11-14,Loja ABC,1,camp_varejo,2026-03-06 18:54:16,False,0.0,0,0,0.0,,0,,0.0,False,3946.56,0.0,Contatado
+debt_0150,cust_9041,1814.23,2026-01-22,Financeira 123,1,camp_pme,2026-03-07 08:05:18,False,0.0,0,0,0.0,,0,,0.0,False,1814.23,0.0,Contatado
+debt_0151,cust_2771,7821.05,2026-01-01,Loja ABC,1,camp_pme,2026-03-07 08:54:30,False,0.0,0,0,0.0,,0,,0.0,False,7821.05,0.0,Contatado
+debt_0152,cust_2307,2605.16,2025-12-22,Telecom Sul,1,camp_varejo,2026-03-07 09:24:17,False,0.0,0,0,0.0,,0,,0.0,False,2605.16,0.0,Contatado
+debt_0153,cust_6378,4014.96,2026-01-25,Financeira 123,1,camp_pme,2026-03-07 09:49:17,False,0.0,0,0,0.0,,0,,0.0,False,4014.96,0.0,Contatado
+debt_0154,cust_3441,910.87,2026-01-10,Telecom Sul,1,camp_pme,2026-03-07 10:04:03,True,0.0,0,0,0.0,,0,,0.0,False,910.87,0.0,Engajado
+debt_0155,cust_9320,1642.07,2025-12-20,Financeira 123,1,camp_varejo,2026-03-07 10:04:38,True,0.0,0,0,0.0,,0,,0.0,False,1642.07,0.0,Engajado
+debt_0156,cust_2133,1655.35,2025-11-07,Financeira 123,1,camp_inadimplencia,2026-03-07 10:08:42,False,0.0,0,0,0.0,,0,,0.0,False,1655.35,0.0,Contatado
+debt_0157,cust_5315,3629.98,2025-12-05,Banco XYZ,1,camp_inadimplencia,2026-03-07 10:32:58,False,0.0,0,0,0.0,,0,,0.0,False,3629.98,0.0,Contatado
+debt_0158,cust_9375,6729.21,2026-01-13,Loja ABC,1,camp_pme,2026-03-07 10:42:05,False,3624.18,2,1,1789.15,2026-03-07 23:39:05,1,0.0,46.14,False,1835.03,49.37,Em Pagamento
+debt_0159,cust_4878,1378.82,2026-01-30,Loja ABC,1,camp_varejo,2026-03-07 10:56:26,False,0.0,0,0,0.0,,0,,0.0,False,1378.82,0.0,Contatado
+debt_0160,cust_7745,868.52,2025-12-16,Varejo Express,1,camp_inadimplencia,2026-03-07 11:17:10,False,0.0,0,0,0.0,,0,,0.0,False,868.52,0.0,Contatado
+debt_0161,cust_5636,3429.1,2026-01-16,Banco XYZ,1,camp_varejo,2026-03-07 11:18:14,False,0.0,0,0,0.0,,0,,0.0,False,3429.1,0.0,Contatado
+debt_0162,cust_2113,4518.09,2025-12-21,Varejo Express,1,camp_inadimplencia,2026-03-07 11:25:07,False,0.0,0,0,0.0,,0,,0.0,False,4518.09,0.0,Contatado
+debt_0163,cust_9004,3465.33,2026-01-09,Telecom Sul,1,camp_inadimplencia,2026-03-07 11:44:30,False,0.0,0,0,0.0,,0,,0.0,False,3465.33,0.0,Contatado
+debt_0164,cust_5397,4667.17,2025-12-02,Telecom Sul,1,camp_pme,2026-03-07 11:53:59,False,0.0,0,0,0.0,,0,,0.0,False,4667.17,0.0,Contatado
+debt_0165,cust_2832,2531.05,2025-12-22,Loja ABC,1,camp_pme,2026-03-07 12:15:03,False,0.0,0,0,0.0,,0,,0.0,False,2531.05,0.0,Contatado
+debt_0166,cust_1339,4116.39,2026-01-07,Varejo Express,1,camp_inadimplencia,2026-03-07 12:36:02,False,0.0,0,0,0.0,,0,,0.0,False,4116.39,0.0,Contatado
+debt_0167,cust_2104,5484.77,2026-01-20,Banco XYZ,1,camp_varejo,2026-03-07 13:04:32,True,0.0,0,0,0.0,,0,,0.0,False,5484.77,0.0,Engajado
+debt_0168,cust_8428,1138.2,2025-12-29,Banco XYZ,1,camp_inadimplencia,2026-03-07 13:10:23,True,2346.22,12,0,0.0,2026-03-08 18:32:23,1,1.0,-106.13,False,2346.22,0.0,Acordo Fechado
+debt_0169,cust_7211,7602.68,2025-11-23,Banco XYZ,1,camp_pme,2026-03-07 14:16:53,False,0.0,0,0,0.0,,0,,0.0,False,7602.68,0.0,Contatado
+debt_0170,cust_3068,6505.99,2025-11-18,Loja ABC,1,camp_inadimplencia,2026-03-07 15:06:55,False,0.0,0,0,0.0,,0,,0.0,False,6505.99,0.0,Contatado
+debt_0171,cust_7396,3502.32,2026-01-28,Telecom Sul,1,camp_pme,2026-03-07 15:18:27,False,0.0,0,0,0.0,,0,,0.0,False,3502.32,0.0,Contatado
+debt_0172,cust_4644,1774.97,2026-01-21,Banco XYZ,1,camp_varejo,2026-03-07 15:22:19,False,0.0,0,0,0.0,,0,,0.0,False,1774.97,0.0,Contatado
+debt_0173,cust_5479,6706.04,2025-12-05,Financeira 123,1,camp_pme,2026-03-07 15:30:15,False,0.0,0,0,0.0,,0,,0.0,False,6706.04,0.0,Contatado
+debt_0174,cust_6927,7304.27,2025-11-10,Loja ABC,1,camp_inadimplencia,2026-03-07 15:40:28,True,1639.79,3,1,552.02,2026-03-08 11:37:28,1,0.0,77.55,False,1087.77,33.66,Em Pagamento
+debt_0175,cust_8811,3227.17,2025-12-22,Varejo Express,1,camp_inadimplencia,2026-03-07 16:10:03,True,0.0,0,0,0.0,,0,,0.0,False,3227.17,0.0,Engajado
+debt_0176,cust_3584,2743.79,2025-12-07,Varejo Express,1,camp_pme,2026-03-07 16:45:19,False,0.0,0,0,0.0,,0,,0.0,False,2743.79,0.0,Contatado
+debt_0177,cust_2899,3773.63,2025-11-03,Varejo Express,1,camp_pme,2026-03-07 16:52:00,False,0.0,0,0,0.0,,0,,0.0,False,3773.63,0.0,Contatado
+debt_0178,cust_2684,4783.09,2025-12-25,Loja ABC,1,camp_pme,2026-03-07 16:56:55,False,0.0,0,0,0.0,,0,,0.0,False,4783.09,0.0,Contatado
+debt_0179,cust_7883,3432.65,2025-11-20,Varejo Express,1,camp_pme,2026-03-07 17:44:01,True,0.0,0,0,0.0,,0,,0.0,False,3432.65,0.0,Engajado
+debt_0180,cust_9797,4785.89,2025-11-14,Loja ABC,1,camp_pme,2026-03-07 18:21:07,False,0.0,0,0,0.0,,0,,0.0,False,4785.89,0.0,Contatado
+debt_0181,cust_9609,6280.45,2025-12-08,Varejo Express,0,Sem Campanha,,False,0.0,0,0,0.0,,0,,0.0,False,6280.45,0.0,Não Contatado
+debt_0182,cust_7816,7047.57,2025-12-05,Telecom Sul,0,Sem Campanha,,False,0.0,0,0,0.0,,0,,0.0,False,7047.57,0.0,Não Contatado
+debt_0183,cust_8977,4661.78,2026-01-01,Loja ABC,0,Sem Campanha,,False,0.0,0,0,0.0,,0,,0.0,False,4661.78,0.0,Não Contatado

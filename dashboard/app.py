@@ -108,6 +108,7 @@ with tab1:
 
     st.divider()
 
+
     st.markdown("#### 📈 Volume de Esforço Operacional (Interações Totais)")
     st.caption("Acompanhe o total de disparos enviados pelo sistema e o total de respostas recebidas (inclui mensagens repetidas do mesmo cliente no mesmo dia).")
     

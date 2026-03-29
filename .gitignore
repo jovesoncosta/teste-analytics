@@ -1,8 +1,6 @@
 venv/
 .env
 
-data/
-
 logs/
 plugins/
 airflow.db
