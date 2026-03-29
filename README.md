@@ -25,7 +25,7 @@ Para garantir que o processamento dos dados ocorra de forma automática e isolad
 <img width="1864" height="666" alt="image" src="https://github.com/user-attachments/assets/c30da26f-110b-49ca-a0e5-b1585edefb49" />
 
 
-* **Separação de Responsabilidades:** O Airflow roda nos bastidores (processamento *batch*) e desliga quando termina. Ele não interfere no Dashboard (Streamlit), que fica disponível 24/7 apenas consumindo os dados prontos da camada Gold. Se o Airflow falhar hoje, o painel continua no ar mostrando os dados de ontem.
+* **Separação de Responsabilidades:** O Airflow roda nos bastidores (processamento *batch*) e desliga quando termina.
 
 ---
 
