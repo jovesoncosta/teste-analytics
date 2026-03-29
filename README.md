@@ -17,7 +17,14 @@ A arquitetura do projeto foi desenhada utilizando o conceito de **Arquitetura Me
 Para garantir que o processamento dos dados ocorra de forma automática e isolada, utilizamos o **Docker** e o **Apache Airflow**.
 
 * **O Ambiente (Docker):** Todo o motor de processamento roda dentro de contêineres Docker. Isso significa que a infraestrutura é replicável; qualquer pessoa pode baixar este projeto e rodá-lo sem se preocupar com conflitos de versão no próprio computador.
+  
+<img width="309" height="372" alt="image" src="https://github.com/user-attachments/assets/54f328c1-e74c-4535-878c-6579b0f68086" />
+
 * **O Maestro (Airflow):** O Apache Airflow atua como o orquestrador do nosso pipeline. Ele possui uma DAG (grafo de tarefas) que dita a ordem exata do ETL: primeiro extrai, depois limpa (Silver) e, por último, constrói a tabela final (Gold).
+
+<img width="1865" height="650" alt="image" src="https://github.com/user-attachments/assets/c7c60b1d-77a1-48f9-a9ce-6fbb431897cb" />
+
+
 * **Separação de Responsabilidades:** O Airflow roda nos bastidores (processamento *batch*) e desliga quando termina. Ele não interfere no Dashboard (Streamlit), que fica disponível 24/7 apenas consumindo os dados prontos da camada Gold. Se o Airflow falhar hoje, o painel continua no ar mostrando os dados de ontem.
 
 ---
@@ -48,18 +55,41 @@ O design do painel (front-end) foi construído em **Streamlit**. A regra de ouro
 ### Ato 1: O Esforço e a Jornada (Aba 1 - Funil da Campanha)
 Responde à pergunta *"O quanto estamos trabalhando e convertendo?"*.
 * Inicia com o Funil de Conversão (do cliente contatado até a quitação), mostrando os gargalos da operação.
+
+<img width="1018" height="482" alt="image" src="https://github.com/user-attachments/assets/0640db58-e135-44a1-a784-9034e64a222a" />
+
+
 * Traz um gráfico de linha do tempo cruzando "Disparos vs. Respostas", provando visualmente se o volume de mensagens enviadas está gerando engajamento real no dia a dia.
+
+<img width="1491" height="518" alt="image" src="https://github.com/user-attachments/assets/132a9b88-2de1-426e-bc9e-d105c8e5627c" />
+
+
 
 ### Ato 2: A Saúde do Negócio (Aba 2 - Saúde dos Acordos)
 Responde à pergunta *"Quão bons são os acordos que estamos fechando?"*.
 * Apresenta Sinais Vitais em cards diretos (Desconto concedido, Taxa de Quebra/Renegociação e Taxas de Pagamento).
+
+<img width="1338" height="361" alt="image" src="https://github.com/user-attachments/assets/3fa6d8de-8284-40d7-a0d0-29879e8d5b10" />
+
+
 * Utiliza gráficos de barras empilhadas e horizontais para ranquear Campanhas e Credores.
+
+<img width="1524" height="473" alt="image" src="https://github.com/user-attachments/assets/ac509420-094b-454d-aef4-ea39a06d817a" />
+
+
 * **UX Avançada (Tooltips):** Os gráficos possuem caixas de informação customizadas. Ao passar o mouse sobre o Credor, o executivo vê não apenas o valor recuperado, mas o Desconto Médio e a Eficiência %, mantendo a tela limpa e entregando detalhes sob demanda.
 * **Tabela de Auditoria:** Uma visão detalhada que mantém o histórico de acordos Cancelados, Quitações e Em Pagamento, permitindo auditoria rápida de qualquer ID sem sair da tela.
+
+<img width="1518" height="450" alt="image" src="https://github.com/user-attachments/assets/c4753c04-7fc2-4e4b-b364-e873cf46f19e" />
+
+
 
 ### Ato 3: O Bottom Line (Aba 3 - Explorador de Caixa)
 Responde à pergunta *"Quanto dinheiro efetivamente entrou na conta?"*.
 * Uma visão puramente financeira (Cash Flow), destacando o ticket médio, o método de pagamento preferido pelos devedores e uma matriz dinâmica para cruzar receitas por mês e por credor.
+
+<img width="1549" height="863" alt="image" src="https://github.com/user-attachments/assets/abfa11b5-d4b5-4cb7-b465-578509e38f8c" />
+
 
 ---
 
