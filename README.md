@@ -32,13 +32,13 @@ Para que se confie nos números do painel, foram implementadas regras rigorosas 
 
 ---
 
-## 4. Qualidade das Métricas Escolhidas e da Transformação
-O Dashboard construído em **Streamlit** não foca apenas em volumes, mas na eficiência real da operação de cobrança. As métricas foram desenhadas para responder às perguntas de negócio mais críticas:
+## 4. Engenharia de Métricas e Lógica de Transformação
+O pipeline não realiza apenas cruzamentos simples de tabelas (JOINs); ele aplica regras de negócio complexas durante a construção da OBT (Camada Gold) para entregar KPIs consolidados e prontos para uso analítico:
 
-* **Time-to-Agreement (Velocidade):** Mede em dias a agilidade da operação. É o tempo entre a primeira mensagem enviada (disparo) e a data da assinatura do acordo.
-* **Desconto Médio vs. Variação:** O pipeline calcula a diferença entre o valor original devido e o valor acordado. O painel foi ajustado para mostrar isso como "% Variação", permitindo ver tanto os descontos concedidos (perdão de dívida) quanto os juros aplicados em parcelamentos longos.
-* **Índice de Renegociação (Churn):** Identifica a taxa de clientes que precisaram refazer o acordo mais de uma vez, servindo como termômetro da qualidade da negociação inicial.
-* **Visão Dupla (Caixa vs. Carteira):** O painel resolve a divergência clássica de CRM. A "Saúde dos Acordos" mostra o dinheiro atrelado apenas aos contratos vigentes (Camada Gold). O "Explorador de Caixa" mostra absolutamente todo o dinheiro recebido na conta bancária (Camada Silver), incluindo pagamentos de acordos que já foram cancelados no passado.
+* **Cálculo de Time-to-Agreement:** Transformação temporal (manipulação de `datetime`) que subtrai a data do primeiro contato sistêmico da data de assinatura do acordo, gerando a cadência exata de conversão em dias.
+* **Modelagem de Variação Financeira (Haircut):** Implementação de cálculo matemático dinâmico `((Dívida - Acordo) / Dívida * 100)`. A lógica foi estruturada na camada de transformação para identificar perfeitamente tanto o perdão de dívida (desconto concedido) quanto o acréscimo de juros em parcelamentos.
+* **Flag de Churn (Índice de Renegociação):** Criação de uma variável analítica baseada no agrupamento de histórico do cliente. A regra de ETL identifica de forma automatizada se o cliente possui múltiplas repactuações (`num_agreements > 1`), sinalizando a quebra de contratos anteriores.
+* **Isolamento de Domínios (Contábil vs. Operacional):** A modelagem de dados separou intencionalmente a regra de cálculo. A OBT foi desenhada para refletir o saldo da "Foto Atual" (isolando apenas a carteira vigente), enquanto a modelagem de pagamentos na Camada Silver foi projetada para auditoria do "Filme Completo", garantindo que a entrada de caixa histórico nunca se perca.
 
 ---
 
